@@ -1,0 +1,265 @@
+@import url('https://fonts.cdnfonts.com/css/racing-sans-one');
+
+.profile-main {
+	height: 91%;
+	display: flex;
+	background-color: #1a1a1a;
+	justify-content: space-evenly;
+}
+
+.profile-div {
+	background-color:gray;
+	height: 80vh;
+	width: 200px;
+	display: flex;
+
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+	box-shadow: -10px 10px 10px rgb(24, 24, 24);
+	/*animation-name: grow;
+	animation-duration: 0.2s;
+	animation-fill-mode: forwards;*/
+
+}
+
+.profile-text-mmr {
+	font-family: 'Racing Sans One', sans-serif;
+	font-size: 25px;
+	padding-top: 20px;
+}
+
+.profile-text-login {
+	font-size: 25px;
+	font-weight: bold;
+}
+
+.profile-first-part {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.profile-text {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items:  center;
+	padding: 25px;
+}
+
+.profile-other-part {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	text-align: center;
+}
+
+.profile-winrate {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.profile-winrate h2 {
+	text-align: center;
+	font-weight: bold;
+	font-size: 36px;	
+}
+
+.profile-winrate h3 {
+	text-align: center;
+	font-size: 30px;	
+}
+
+.profile-addfriend-button {
+	background: #3f3f46;
+
+	border-radius: 50%;
+}
+
+.profile-buttons {
+	display: flex;
+	flex-direction: column;
+}
+  
+/*@keyframes grow {
+	from {
+	  transform: translate(50%, -50%) scale(0);
+	}
+	to {
+	  transform: translate(0, 0) scale(1);
+	}
+  }*/
+
+.profile-data img {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+}
+
+.game-component-WINNER {
+	background: #3f3f46;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	width: 500px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 0.375rem;
+
+	border-width: 2px;
+	border-color: lightgreen;
+}
+
+.game-component-LOSER {	text-align: center;
+
+	background: #3f3f46;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	width: 500px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 0.375rem;
+
+	border-width: 2px;
+	border-color: lightcoral;
+}
+
+.game-component-WINNER img {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+
+.game-component-LOSER img {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+
+.profile-main button {
+	width: fit-content;
+	align-self: center;
+}
+
+
+.profile-rank {
+	display: flex;
+	align-self: center;
+	flex-direction: row;
+	background: #3f3f46;
+	padding: 10px;
+	border-radius: 0.375rem;
+}
+
+.profile-data {
+	width: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+	background: #3f3f46;
+	padding: 10px;
+	border-radius: 0.375rem;
+	margin: 10px;
+}
+
+.profile-leaderboard {
+	align-self: center;
+}
+
+.profile-history {
+	overflow: auto;
+}
+
+.profile-history::-webkit-scrollbar {
+	display: none;
+}
+
+.profile-error-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 100px;
+
+}
+
+.profile-error-main span {
+	font-size: 45px;
+	font-weight: bold;
+	padding: 10px
+}
+
+/*
+ * react-circular-progressbar styles
+ * All of the styles in this file are configurable!
+ */
+
+ .CircularProgressbar {
+	/*
+	 * This fixes an issue where the CircularProgressbar svg has
+	 * 0 width inside a "display: flex" container, and thus not visible.
+	 */
+	width: 100%;
+	/*
+	 * This fixes a centering issue with CircularProgressbarWithChildren:
+	 * https://github.com/kevinsqi/react-circular-progressbar/issues/94
+	 */
+	vertical-align: middle;
+  }
+  
+  .CircularProgressbar .CircularProgressbar-path {
+	stroke: #3e98c7;
+	stroke-linecap: round;
+	transition: stroke-dashoffset 0.5s ease 0s;
+  }
+  
+  .CircularProgressbar .CircularProgressbar-trail {
+	stroke: #d6d6d6;
+	/* Used when trail is not full diameter, i.e. when props.circleRatio is set */
+	stroke-linecap: round;
+  }
+  
+  .CircularProgressbar .CircularProgressbar-text {
+	fill: #3e98c7;
+	font-size: 20px;
+	dominant-baseline: middle;
+	text-anchor: middle;
+  }
+  
+  .CircularProgressbar .CircularProgressbar-background {
+	fill: #d6d6d6;
+  }
+  
+  /*
+   * Sample background styles. Use these with e.g.:
+   *
+   *   <CircularProgressbar
+   *     className="CircularProgressbar-inverted"
+   *     background
+   *     percentage={50}
+   *   />
+   */
+  .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-background {
+	fill: #3e98c7;
+  }
+  
+  .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-text {
+	fill: #fff;
+  }
+  
+  .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-path {
+	stroke: #fff;
+  }
+  
+  .CircularProgressbar.CircularProgressbar-inverted .CircularProgressbar-trail {
+	stroke: transparent;
+  }

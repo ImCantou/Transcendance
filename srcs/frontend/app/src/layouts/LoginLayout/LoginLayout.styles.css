@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+/* Welcome */
+
+.main-page {
+	box-sizing: border-box;
+
+	width: 100vw;
+	height: 100vh;
+
+	background: #242424;
+	mix-blend-mode: normal;
+	border: 1px solid #000000;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Frame 1 */
+
+.frame-1 {
+	width: 75vw;
+	height: 75vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+/* Welcome to Transcendance Please sign in to continue */
+
+@media only screen and (max-width: 992px) {
+	.text-1 {
+		width: 100%;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 44px;
+		line-height: 75px;
+		text-align: center;
+
+		color: #F2F2F2;
+	}
+
+	/* SignIn Button */
+
+	.signin-button {
+		width: 300px;
+		height: 75px;
+		left: calc(50% - 500px / 2);
+		top: calc(50% - 125px / 2);
+
+		background: #CF7200;
+		mix-blend-mode: normal;
+		transition: 0.25s;
+	}
+
+	/* Sign in with 42 */
+
+	.text-2 {
+
+		width: 746px;
+		height: 50px;
+		left: calc(50% - 746px/2 - 1px);
+		top: calc(50% - 50px/2 + 0.5px);
+
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 47px;
+		text-align: center;
+
+		color: #F2F2F2;
+
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.text-1 {
+		width: 100%;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 54px;
+		line-height: 75px;
+		text-align: center;
+
+		color: #F2F2F2;
+	}
+
+	/* SignIn Button */
+
+	.signin-button {
+		width: 400px;
+		height: 100px;
+		left: calc(50% - 500px / 2);
+		top: calc(50% - 125px / 2);
+
+		background: #CF7200;
+		mix-blend-mode: normal;
+		transition: 0.25s;
+	}
+
+	/* Sign in with 42 */
+
+	.text-2 {
+
+		width: 746px;
+		height: 50px;
+		left: calc(50% - 746px/2 - 1px);
+		top: calc(50% - 50px/2 + 0.5px);
+
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 30px;
+		line-height: 47px;
+		text-align: center;
+
+		color: #F2F2F2;
+
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	.text-1 {
+		width: 100%;
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 64px;
+		line-height: 75px;
+		text-align: center;
+
+		color: #F2F2F2;
+	}
+
+	/* SignIn Button */
+
+	.signin-button {
+		width: 500px;
+		height: 125px;
+		left: calc(50% - 500px / 2);
+		top: calc(50% - 125px / 2);
+
+		background: #CF7200;
+		mix-blend-mode: normal;
+		transition: 0.25s;
+	}
+
+	/* Sign in with 42 */
+
+	.text-2 {
+
+		width: 746px;
+		height: 50px;
+		left: calc(50% - 746px/2 - 1px);
+		top: calc(50% - 50px/2 + 0.5px);
+
+		font-family: 'Roboto';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 40px;
+		line-height: 47px;
+		text-align: center;
+
+		color: #F2F2F2;
+
+	}
+}

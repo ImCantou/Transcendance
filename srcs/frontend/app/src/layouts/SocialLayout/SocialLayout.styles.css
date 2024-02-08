@@ -1,0 +1,126 @@
+.friends-main {
+	height: 90vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: #242424;
+}
+
+.social-list {
+	overflow: auto;
+}
+
+.social-list::-webkit-scrollbar {
+	display: none;
+}
+
+.friends-friends {
+	display: flex;
+	flex-direction: row;
+	background-color: #1a1a1a;
+	border-radius: 0.375rem;
+	margin: 25px;
+	justify-content: center;
+	width: 650px;
+	height: 800px;
+}
+
+.friends-friends button {
+	background-color: #1a1a1a;
+}
+
+.friends-friends span {
+	text-align: center;
+	font-weight: bold;
+}
+
+.friends-friends-demand {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #1a1a1a;
+	border-radius: 0.375rem;
+	margin: 25px;
+	padding: 50px;
+
+	width: 450px;
+	height: 800px;
+}
+
+.friends-friends-demand button {
+	background-color: #1a1a1a;
+}
+
+.friends-friends-demand span {
+	text-align: center;
+	font-weight: bold;
+}
+
+.friends-friendlist {
+	display: flex;
+	flex-direction: column;
+	padding: 50px;
+	align-items: center;
+	width: 325px
+}
+
+.friends-friendlist-component img {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+
+.friends-friendlist-img-ONLINE {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	border-width: 2px;
+	border-color: lightgreen;
+}
+
+.friends-friendlist-img-OFFLINE {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	border-width: 2px;
+	border-color: rgb(126, 126, 126);
+}
+
+.friends-friendlist-img-INGAME {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	border-width: 2px;
+	border-color: lightskyblue;
+}
+
+.friends-friendlist-component {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 10px;
+}
+
+.friends-friendlist-name {
+	text-align: center;
+	margin-left: 15px;
+}
+
+.friends-friendlist-name p {
+	width: 100px;
+
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.friends-friendlist-nameStatus-ONLINE {
+	color: lightgreen;
+}
+.friends-friendlist-nameStatus-OFFLINE {
+	color: rgb(126, 126, 126);
+}
+.friends-friendlist-nameStatus-INGAME {
+	color: lightskyblue;
+}

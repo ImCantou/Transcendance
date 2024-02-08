@@ -1,0 +1,182 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Status {
+  PUBLIC
+  PRIVATE
+  PROTECT
+}
+
+enum GameStatus {
+	IN_LOBBY
+	IDLE
+}
+enum UserStatus {
+	ONLINE
+	OFFLINE
+	INGAME
+}
+
+
+model User {
+  id			Int			@id @unique @default(autoincrement())
+  id42			Int			@unique
+  image			String
+  mmr			Int			@default(1000)
+  status		UserStatus	@default(OFFLINE)
+  name			String		@unique
+  is2FAOn		Boolean		@default(false)
+  signUp		Boolean		@default(true)
+  createdAt		DateTime	@default(now())
+  updatedAt		DateTime	@updatedAt
+  secret2FA		String?
+  gameProfile	GameProfile?
+
+
+  // Connexion from another table
+  members        Member[]
+  friends        User[]   @relation("friends")
+  pendingFriends User[]   @relation("pendingFriends")
+  blockedUsers   User[]   @relation("blockedUsers")
+
+  friendsRelation        User[] @relation("friends")
+  pendingFriendsRelation User[] @relation("pendingFriends")
+  blockedUsersRelation   User[] @relation("blockedUsers")
+
+
+  channelOwner	Channel[]	@relation("owners")
+  isBan			Ban[]		@relation("bans")
+
+  message		Message[]
+
+  @@map("users")
+}
+
+model GameProfile {
+  
+  id 	String  @id @unique @default(uuid())
+  userId	Int @unique
+  user   	User @relation(fields: [userId], references: [id])
+  playSocketId	String
+  
+  status 	GameStatus @default(IDLE)
+  lobby		String @default("")
+
+  history	Game[]
+
+  wins Int	@default(0)
+  gameWons	Game[] @relation("winners")
+  loss Int	@default(0)
+  gameLosts	Game[] @relation("losers")
+
+
+  @@map("gameProfiles")
+}
+
+model Game {
+  id String @id @unique @default(uuid())
+
+  createdAt DateTime @default(now())
+  updateAt  DateTime @default(now()) @updatedAt
+
+  isStarted	Boolean @default(false)
+
+  gamemode	String
+
+  players	GameProfile[]
+  
+  winnerId	Int?
+  winner	GameProfile?	@relation("winners", fields: [winnerId], references: [userId])
+
+  loserId	Int?
+  loser	GameProfile?	@relation("losers", fields: [loserId], references: [userId])
+
+  scores	Int[] @default([0, 0])
+  timerMS	Int @default(0)
+
+  @@map("games")
+}
+
+model Channel {
+  id String @id @unique @default(uuid())
+
+  createdAt DateTime @default(now())
+  updateAt  DateTime @default(now()) @updatedAt
+
+  name        String
+  avatar      String?
+  description String  @default("")
+
+  status Status @default(PUBLIC)
+
+  ownerId Int?
+  owner   User? @relation("owners", fields: [ownerId], references: [id])
+
+  members Member[]
+  direct Boolean @default(false)
+
+  bans Ban[] @relation("bans")
+
+  messagesId Int[]
+  Message    Message[]
+
+  password String? @db.VarChar(2000)
+
+  @@map("channels")
+}
+
+model Member {
+  id String @id @unique @default(uuid())
+
+  channelId String
+  userId    Int
+  channel   Channel @relation(fields: [channelId], references: [id])
+  user      User    @relation(fields: [userId], references: [id])
+
+  mute    Boolean   @default(false)
+  muteEnd DateTime?
+
+  isAdmin Boolean @default(false)
+
+  @@map("members")
+}
+
+model Ban {
+  id String @id @unique @default(uuid())
+
+ channelId String
+  userId    Int
+  channel   Channel @relation("bans", fields: [channelId], references: [id])
+  user      User    @relation("bans", fields: [userId], references: [id])
+
+  reason String?
+
+  @@map("bans")
+}
+
+model Message {
+  id String @unique @default(uuid())
+
+  createdAt DateTime @default(now())
+  updateAt  DateTime @updatedAt
+
+  channel   Channel @relation(fields: [channelId], references: [id])
+  channelId String
+
+  author   User @relation(fields: [authorId], references: [id])
+  authorId Int
+
+  content String @db.VarChar(2000)
+  link    String? @db.VarChar(2000)
+
+  @@map("messages")
+}

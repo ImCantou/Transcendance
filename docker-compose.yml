@@ -1,0 +1,78 @@
+version: "3.9"
+
+services:
+    database:
+        container_name: database
+        restart: unless-stopped
+        image: postgres:15.3
+        volumes:
+            - type: volume
+              source: database
+              target: /var/lib/postgresql/data
+        env_file: env_files/database.env
+        networks:
+            - transcendance
+
+    api:
+        container_name: api
+        restart: unless-stopped
+        depends_on:
+            - database
+        build:
+            context: srcs/backend/
+            dockerfile: Dockerfile
+        volumes:
+            - type: volume
+              source: api
+              target: /api
+        env_file:
+            - env_files/api.env
+            - env_files/42.api.env
+            - env_files/api.secret.env
+        networks:
+            - transcendance
+        ports:
+            - 5555:5555 # prisma studio
+            - 3000:3000 # nestJS
+
+    frontend:
+        container_name: frontend
+        restart: unless-stopped
+        depends_on:
+            - api
+        build:
+            context: srcs/frontend/
+            dockerfile: Dockerfile
+        volumes:
+            - type: volume
+              source: frontend
+              target: /app
+        env_file:
+            - env_files/42.api.env
+        networks:
+            - transcendance
+        ports:
+            - 8000:8000
+
+volumes:
+    database:
+        driver: local
+
+    api:
+        driver: local
+        driver_opts:
+            type: "none"
+            o: bind
+            device: "$PWD/srcs/backend/api"
+
+    frontend:
+        driver: local
+        driver_opts:
+            type: "none"
+            o: bind
+            device: "$PWD/srcs/frontend/app"
+
+networks:
+    transcendance:
+        driver: bridge
+        name: transcendance

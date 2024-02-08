@@ -1,0 +1,9 @@
+.UpdatePfpButton {
+    width: 15vw;
+}
+
+.UpdatePfpButton img {
+    height: 15%;
+    width: 15vw;
+    border-radius: 50%;
+}

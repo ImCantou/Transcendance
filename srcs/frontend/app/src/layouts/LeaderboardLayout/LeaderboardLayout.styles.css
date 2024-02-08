@@ -1,0 +1,188 @@
+@import url('https://fonts.cdnfonts.com/css/racing-sans-one');
+@import url('https://db.onlinewebfonts.com/c/82724711928097a9b800297e88bbfeb1?family=minecraft+enchantment+Regular');
+
+.leaderboard-main {
+	padding-top: 100px;
+	height: 90vh;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #1a1a1a;
+}
+
+.leaderboard-default {
+	overflow: auto;
+}
+
+.leaderboard-default::-webkit-scrollbar {
+	display: none;
+}
+
+.leaderboard-main img {
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+	flex-shrink: 0;
+}
+
+.leaderboard-main button {
+	background-color: #71717a;
+	font-weight: bold;
+	width: 120px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.leaderboard-main button:hover {
+	background-color: rgb(146,64,14);
+}
+
+
+
+.leaderboard-firsts-default {
+	display: flex;
+	flex-direction: row;
+}
+
+.leaderboard-firsts-default > :nth-child(2) { order: -1; }
+
+.leaderboard-component {
+	background: #3f3f46;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	width: 500px;
+	padding: 10px;
+	margin: 10px;
+	border-radius: 0.375rem;
+}
+
+.leaderboard-name {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-left: 25px;
+	margin-right: 25px;
+	font-weight: bold;
+
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.leaderboard-main p {
+	width: 100px;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+.leaderboard-1 {
+	width: 450px;
+	height: 300px;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	background: linear-gradient(0deg, rgb(233, 183, 17) 90%, #1a1a1a 10%);
+	
+	padding: 10px;
+}
+
+
+
+.leaderboard-2 {
+	width: 450px;
+	height: 300px;
+
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+	
+	background: linear-gradient(0deg, silver 75%, #1a1a1a 25%);
+
+	padding: 10px;
+}
+
+.leaderboard-3 {
+	width: 450px;
+	height: 300px;
+
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+
+	background: linear-gradient(0deg, #cd7f32 60%, #1a1a1a 40%);
+
+	padding: 10px;
+}
+
+.leaderboard-1 div { 
+	display: flex; 
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-around;
+
+}
+
+.leaderboard-span {
+	font-size: 74px;
+	font-family: 'Racing Sans One', sans-serif;
+                                                
+}
+
+.leaderboard-racing {
+	width: 100px;
+	font-stretch: condensed;
+	font-kerning: none;
+	font-weight: bold;
+	font-size: 24px;
+
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: clip;
+}
+
+.leaderboard-mc {
+	font-family: "minecraft enchantment Regular";
+	font-size: 72px;
+	opacity: 1%;
+	white-space: nowrap;
+}
+
+.leaderboard-2 div { 
+	display: flex; 
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-around;
+
+}
+
+.leaderboard-3 div { 
+	display: flex; 
+	flex-direction: row;
+	align-items: flex-end;
+	justify-content: space-around;
+
+}
+
+.leaderboard-winrate {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin-left: 25px;
+	margin-right: 25px;
+}

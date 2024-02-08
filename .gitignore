@@ -1,0 +1,21 @@
+# IDEs and editors
+.vscode*
+.idea*
+
+# Dependencies
+node_modules/
+
+# Production
+dist/
+migrations/
+
+
+# Secret 42 API
+42.api.env
+api.secret.env
+*.env
+
+#Images
+
+srcs/backend/api/images/*
+!srcs/backend/api/images/.forGit

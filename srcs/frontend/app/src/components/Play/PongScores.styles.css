@@ -1,0 +1,96 @@
+.PongScores {
+	background-color: rgb(14, 14, 14);
+	display: flex;
+	align-items: center;
+	flex-flow: row nowrap;
+	justify-content: space-around;
+}
+
+.PongScores-divleft {
+
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	text-align: left;
+	width: 46%;
+	font-size: 1.25rem; /* 30px */
+	line-height: 2.25rem; /* 36px */
+	font-weight: bold;
+	margin: 0.75rem; /* 12px */
+	
+}
+
+.PongScores-divright {
+
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+	text-align: right;
+	width: 46%;
+	font-size: 1.25rem; /* 30px */
+	line-height: 2.25rem; /* 36px */
+	font-weight: bold;
+	margin: 0.75rem; /* 12px */
+	
+}
+
+.PongScores-divtimer {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	width: 8%;
+	font-size: 1.25rem; /* 30px */
+	line-height: 2.25rem; /* 36px */
+	font-weight: bold;
+	text-align: center;
+	margin: 0.75rem; /* 12px */
+	
+
+}
+
+
+
+.PongScores-subdivleft {
+	width: 85%;
+
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: flex-start;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+
+
+}
+
+
+
+.PongScores-subdivright {
+	width: 85%;
+
+	margin: 0;
+	display: flex;
+	justify-content: flex-end;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+
+
+}
+
+.PongScores-name {
+	
+	text-align: end;
+
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: clip;
+	font-size: 1.25rem; /* 30px */
+	line-height: 2.25rem; /* 36px */
+	font-weight: bold;
+	text-align: center;
+}

@@ -1,0 +1,300 @@
+/* Welcome - OTP */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i');
+
+.OTPmain-page {
+    box-sizing: border-box;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: #242424;
+    mix-blend-mode: normal;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.OTPframe-1 {
+    width: 75vw;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 992px) {
+    .OTPtext-1 {
+        width: 50%;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 44px;
+        line-height: 75px;
+        text-align: center;
+
+        color: #F2F2F2;
+    }
+
+    .OTPerror-button {
+        width: 300px;
+        height: 75px;
+        left: calc(50% - 500px/2 - 1px);
+        top: calc(50% - 125px/2);
+
+        background: #FF4040;
+        mix-blend-mode: normal;
+    }
+
+    .OTPtext-2 {
+
+        width: 746px;
+        height: 50px;
+        left: calc(50% - 746px/2 - 1px);
+        top: calc(50% - 50px/2 + 0.5px);
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 47px;
+        text-align: center;
+
+        color: #F2F2F2;
+
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .OTPtext-1 {
+        width: 50%;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 54px;
+        line-height: 75px;
+        text-align: center;
+
+        color: #F2F2F2;
+    }
+
+    .OTPerror-button {
+        width: 400px;
+        height: 100px;
+        left: calc(50% - 500px/2 - 1px);
+        top: calc(50% - 125px/2);
+
+        background: #FF4040;
+        mix-blend-mode: normal;
+    }
+
+    .OTPtext-2 {
+
+        width: 746px;
+        height: 50px;
+        left: calc(50% - 746px/2 - 1px);
+        top: calc(50% - 50px/2 + 0.5px);
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 47px;
+        text-align: center;
+
+        color: #F2F2F2;
+
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .OTPtext-1 {
+        width: 50%;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 75px;
+        text-align: center;
+
+        color: #F2F2F2;
+    }
+
+    .OTPerror-button {
+        width: 500px;
+        height: 125px;
+        left: calc(50% - 500px/2 - 1px);
+        top: calc(50% - 125px/2);
+
+        background: #FF4040;
+        mix-blend-mode: normal;
+    }
+
+    .OTPtext-2 {
+
+        width: 746px;
+        height: 50px;
+        left: calc(50% - 746px/2 - 1px);
+        top: calc(50% - 50px/2 + 0.5px);
+
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 40px;
+        line-height: 47px;
+        text-align: center;
+
+        color: #F2F2F2;
+
+    }
+}
+
+
+/* Box + text OTP Frame */
+
+
+/*position: absolute;
+width: 1557px;
+height: 340px;
+left: calc(50% - 1557px/2 - 0.5px);
+top: calc(50% - 340px/2 - 100px); */
+
+
+
+/* Boxes OTP */
+
+/*position: absolute;
+width: 970px;
+height: 120px;
+left: calc(50% - 970px/2 - 0.5px);
+bottom: 0px;*/
+
+
+
+/* Rectangle 1 */
+
+/*position: absolute;
+width: 120px;
+height: 120px;
+left: 0px;
+top: 0px;
+
+background: #D9D9D9;*/
+
+
+/* Rectangle 2 */
+
+/*position: absolute;
+width: 120px;
+height: 120px;
+left: 170px;
+top: 0px;
+
+background: #D9D9D9;*/
+
+
+/* Rectangle 3 */
+
+/*position: absolute;
+width: 120px;
+height: 120px;
+left: 340px;
+top: 0px;
+
+background: #D9D9D9;*/
+
+
+/* Rectangle 4 */
+
+/*position: absolute;
+width: 120px;
+height: 120px;
+left: 510px;
+top: 0px;
+
+background: #D9D9D9;*/
+
+
+/* Rectangle 5 */
+
+/*position: absolute;
+width: 120px;
+height: 120px;
+left: 680px;
+top: 0px;
+
+background: #D9D9D9;*/
+
+
+/* Rectangle 6 */
+
+/*position: absolute;
+width: 120px;
+height: 120px;
+left: 850px;
+top: 0px;
+
+background: #D9D9D9;*/
+
+
+/* Enter your One Time Password */
+
+/*position: absolute;
+width: 1557px;
+height: 209px;
+left: calc(50% - 1557px/2);
+top: 0px;
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 64px;
+line-height: 75px;
+text-align: center;
+
+color: #F2F2F2;*/
+
+
+
+/* Error OTP frame */
+
+/*position: absolute;
+width: 500px;
+height: 125px;
+left: calc(50% - 500px/2 - 26px);
+bottom: 399px;*/
+
+
+
+/* OTP frame */
+
+/*position: absolute;
+width: 500px;
+height: 125px;
+left: calc(50% - 500px/2 - 1px);
+top: calc(50% - 125px/2);
+
+background: #FF4040;
+mix-blend-mode: normal;*/
+
+
+/* Error: wrong OTP */
+
+/*position: absolute;
+width: 746px;
+height: 50px;
+left: calc(50% - 746px/2 - 1px);
+top: calc(50% - 50px/2 + 0.5px);
+
+font-family: 'Roboto';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 47px;
+text-align: center;
+
+color: #F2F2F2;*/
